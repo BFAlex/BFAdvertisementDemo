@@ -7,21 +7,79 @@
 //
 
 #import "ViewController.h"
+#import "BFPreView.h"
+#import "BFAdvertisementView.h"
 
-@interface ViewController ()
-
+@interface ViewController () {
+    BFPreView *_preview;
+    BFAdvertisementView *_adView;
+    
+    NSTimer *_timer;
+}
+@property (weak, nonatomic) IBOutlet UIButton *updateBtn;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    [self setupView];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setupView {
+    int rdm = arc4random()%2;
+    NSLog(@"random number: %d", rdm);
+    switch (rdm) {
+        case 0:
+            [self setupPreView];
+            break;
+            
+        case 1:
+            [self setupAdvertisementView];
+            break;
+            
+        default:
+            break;
+    }
+}
+
+- (void)setupPreView {
+    NSLog(@"%s", __func__);
+    
+    _preview = [BFPreView preViewWithFrame:self.view.frame];
+    [self.view insertSubview:_preview belowSubview:self.updateBtn];
+}
+
+- (void)setupAdvertisementView {
+    NSLog(@"%s", __func__);
+    
+    _adView = [BFAdvertisementView advertisementViewWithFrame:self.view.frame];
+    [self.view insertSubview:_adView belowSubview:self.updateBtn];
+}
+
+- (IBAction)clickUpdateBtn:(UIButton *)sender {
+    if (_preview) {
+        [_preview removeFromSuperview];
+    }
+    
+    if (_adView) {
+        [_adView removeFromSuperview];
+    }
+    
+    [self setupView];
+}
+
+- (IBAction)clickRemoveBtn:(UIButton *)sender {
+    if (_preview) {
+        [_preview removeFromSuperview];
+        _preview = nil;
+    }
+    
+    if (_adView) {
+        [_adView removeFromSuperview];
+        _adView = nil;
+    }
 }
 
 @end

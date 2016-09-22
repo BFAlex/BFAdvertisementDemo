@@ -15,6 +15,10 @@
 		A8D339C81D915A280023D8BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8D339C61D915A280023D8BE /* LaunchScreen.storyboard */; };
 		A8D339D31D915A290023D8BE /* BFAdvertisementDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D339D21D915A290023D8BE /* BFAdvertisementDemoTests.m */; };
 		A8D339DE1D915A290023D8BE /* BFAdvertisementDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D339DD1D915A290023D8BE /* BFAdvertisementDemoUITests.m */; };
+		A8D339F41D915C3E0023D8BE /* BFPreView.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D339F31D915C3E0023D8BE /* BFPreView.m */; };
+		A8D339F61D915C570023D8BE /* BFPreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8D339F51D915C570023D8BE /* BFPreView.xib */; };
+		A8D773AD1D9262000050C5B1 /* BFAdvertisementView.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D773AC1D9262000050C5B1 /* BFAdvertisementView.m */; };
+		A8D773AF1D9262160050C5B1 /* BFAdvertisementView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8D773AE1D9262160050C5B1 /* BFAdvertisementView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,12 @@
 		A8D339D91D915A290023D8BE /* BFAdvertisementDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BFAdvertisementDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8D339DD1D915A290023D8BE /* BFAdvertisementDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BFAdvertisementDemoUITests.m; sourceTree = "<group>"; };
 		A8D339DF1D915A290023D8BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8D339F21D915C3E0023D8BE /* BFPreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFPreView.h; sourceTree = "<group>"; };
+		A8D339F31D915C3E0023D8BE /* BFPreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFPreView.m; sourceTree = "<group>"; };
+		A8D339F51D915C570023D8BE /* BFPreView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BFPreView.xib; sourceTree = "<group>"; };
+		A8D773AB1D9262000050C5B1 /* BFAdvertisementView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFAdvertisementView.h; sourceTree = "<group>"; };
+		A8D773AC1D9262000050C5B1 /* BFAdvertisementView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFAdvertisementView.m; sourceTree = "<group>"; };
+		A8D773AE1D9262160050C5B1 /* BFAdvertisementView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BFAdvertisementView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +111,13 @@
 		A8D339B71D915A280023D8BE /* BFAdvertisementDemo */ = {
 			isa = PBXGroup;
 			children = (
+				A8D339F11D915C160023D8BE /* View */,
+				A8D339EB1D915B980023D8BE /* Controller */,
 				A8D339BB1D915A280023D8BE /* AppDelegate.h */,
 				A8D339BC1D915A280023D8BE /* AppDelegate.m */,
 				A8D339BE1D915A280023D8BE /* ViewController.h */,
 				A8D339BF1D915A280023D8BE /* ViewController.m */,
 				A8D339C11D915A280023D8BE /* Main.storyboard */,
-				A8D339C41D915A280023D8BE /* Assets.xcassets */,
-				A8D339C61D915A280023D8BE /* LaunchScreen.storyboard */,
-				A8D339C91D915A280023D8BE /* Info.plist */,
 				A8D339B81D915A280023D8BE /* Supporting Files */,
 			);
 			path = BFAdvertisementDemo;
@@ -117,6 +126,9 @@
 		A8D339B81D915A280023D8BE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A8D339C41D915A280023D8BE /* Assets.xcassets */,
+				A8D339C61D915A280023D8BE /* LaunchScreen.storyboard */,
+				A8D339C91D915A280023D8BE /* Info.plist */,
 				A8D339B91D915A280023D8BE /* main.m */,
 			);
 			name = "Supporting Files";
@@ -138,6 +150,26 @@
 				A8D339DF1D915A290023D8BE /* Info.plist */,
 			);
 			path = BFAdvertisementDemoUITests;
+			sourceTree = "<group>";
+		};
+		A8D339EB1D915B980023D8BE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A8D339F11D915C160023D8BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A8D339F21D915C3E0023D8BE /* BFPreView.h */,
+				A8D339F31D915C3E0023D8BE /* BFPreView.m */,
+				A8D339F51D915C570023D8BE /* BFPreView.xib */,
+				A8D773AB1D9262000050C5B1 /* BFAdvertisementView.h */,
+				A8D773AC1D9262000050C5B1 /* BFAdvertisementView.m */,
+				A8D773AE1D9262160050C5B1 /* BFAdvertisementView.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,7 +275,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8D339F61D915C570023D8BE /* BFPreView.xib in Resources */,
 				A8D339C81D915A280023D8BE /* LaunchScreen.storyboard in Resources */,
+				A8D773AF1D9262160050C5B1 /* BFAdvertisementView.xib in Resources */,
 				A8D339C51D915A280023D8BE /* Assets.xcassets in Resources */,
 				A8D339C31D915A280023D8BE /* Main.storyboard in Resources */,
 			);
@@ -270,9 +304,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8D339F41D915C3E0023D8BE /* BFPreView.m in Sources */,
 				A8D339C01D915A280023D8BE /* ViewController.m in Sources */,
 				A8D339BD1D915A280023D8BE /* AppDelegate.m in Sources */,
 				A8D339BA1D915A280023D8BE /* main.m in Sources */,
+				A8D773AD1D9262000050C5B1 /* BFAdvertisementView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +532,7 @@
 				A8D339E41D915A290023D8BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A8D339E51D915A290023D8BE /* Build configuration list for PBXNativeTarget "BFAdvertisementDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +541,7 @@
 				A8D339E71D915A290023D8BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A8D339E81D915A290023D8BE /* Build configuration list for PBXNativeTarget "BFAdvertisementDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +550,7 @@
 				A8D339EA1D915A290023D8BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
